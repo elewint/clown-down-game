@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MapController : MonoBehaviour
 {
-    public GameObject spawnObject;
+    // public GameObject spawnObject;
     private int speed = 10;
     private float spawnRadius = 10f;
     private int numOfObjects = 10;
@@ -25,7 +25,7 @@ public class MapController : MonoBehaviour
             if (Physics.Raycast(spawnPosRelative, Vector3.down, out hit))
             {
                 Vector3 spawnPosFinal = hit.point;
-                Instantiate(spawnObject, spawnPosFinal, Quaternion.identity);
+                // Instantiate(spawnObject, spawnPosFinal, Quaternion.identity);
             }
             
         }
