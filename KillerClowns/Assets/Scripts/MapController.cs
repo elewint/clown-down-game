@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MapController : MonoBehaviour
 {
-    // public GameObject spawnObject;
-    // public GameObject spawnPlane;
-    // public GameObject spawnParent;
+    public GameObject spawnObject;
+    public GameObject spawnPlane;
+    public GameObject spawnParent;
     private int speed = 20;
     // private float spawnRadius = 10f;
     // private int numOfObjects = 10;
@@ -14,23 +14,7 @@ public class MapController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // RaycastHit hit;
-        
-        // Vector3 rayStartPos = spawnPlane.transform.position;
-
-        // if (Physics.Raycast(rayStartPos, spawnPlane.transform.up * -1.0f, out hit))
-        // {
-        //     Debug.Log("Hit");
-        //     Debug.DrawLine(rayStartPos, hit.point, Color.white, 100f);
-        //     Quaternion startRot = Quaternion.LookRotation(hit.normal);
-        //     startRot *= Quaternion.Euler(90, 0, 0);
-        //     GameObject newSpawnObj = Instantiate(spawnObject, hit.point, startRot);
-        //     newSpawnObj.transform.SetParent(spawnParent.transform);
-        // }
-        // else
-        // {
-        //     Debug.Log("Miss");
-        // }
+        InvokeRepeating("SpawnChildren", 0f, 3f);
     }
 
     // Update is called once per frame
@@ -43,5 +27,41 @@ public class MapController : MonoBehaviour
         {
             transform.Rotate(Vector3.right * speed * Time.deltaTime);
         }
+    }
+    
+    private void SpawnChildren()
+    {
+        RaycastHit hit;
+        
+        Vector3 rayStartPos = spawnPlane.transform.position;
+        rayStartPos.x = Random.Range(-10f, 10f);
+
+        if (Physics.Raycast(rayStartPos, spawnPlane.transform.up * -1.0f, out hit))
+        {
+            // Debug.Log("Spawned!");
+            // Debug.DrawLine(rayStartPos, hit.point, Color.white, 100f);
+
+            // Set rotation of child
+            Quaternion startRot = Quaternion.LookRotation(hit.normal);
+            startRot *= Quaternion.Euler(90, 0, 0);
+
+            if (rayStartPos.x < -2f)
+            {
+                startRot *= Quaternion.Euler(0, 45, 0);
+            } else if (rayStartPos.x > 2f)
+            {
+                startRot *= Quaternion.Euler(0, -45, 0);
+            }
+            
+            // Spawn child
+            GameObject newSpawnObj = Instantiate(spawnObject, hit.point, startRot);
+            newSpawnObj.transform.SetParent(spawnParent.transform);
+            
+            Destroy(newSpawnObj, 20f);
+        }
+        // else
+        // {
+        //     Debug.Log("Miss");
+        // }
     }
 }
