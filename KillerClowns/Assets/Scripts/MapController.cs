@@ -7,7 +7,7 @@ public class MapController : MonoBehaviour
     // public GameObject spawnObject;
     // public GameObject spawnPlane;
     // public GameObject spawnParent;
-    private int speed = 10;
+    private int speed = 20;
     // private float spawnRadius = 10f;
     // private int numOfObjects = 10;
 

@@ -106,7 +106,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             desiredMove = Vector3.ProjectOnPlane(desiredMove, hitInfo.normal).normalized;
 
             m_MoveDir.x = desiredMove.x*speed;
-            m_MoveDir.z = desiredMove.z*speed;
+            // m_MoveDir.z = desiredMove.z*speed;
 
 
             if (m_CharacterController.isGrounded)
