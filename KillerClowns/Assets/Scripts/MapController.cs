@@ -5,31 +5,32 @@ using UnityEngine;
 public class MapController : MonoBehaviour
 {
     // public GameObject spawnObject;
+    // public GameObject spawnPlane;
+    // public GameObject spawnParent;
     private int speed = 10;
-    private float spawnRadius = 10f;
-    private int numOfObjects = 10;
+    // private float spawnRadius = 10f;
+    // private int numOfObjects = 10;
 
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < numOfObjects; i++)
-        {
-            // Vector2 spawnPos2D = Random.insideUnitCircle * spawnRadius;
-            // Vector3 spawnPos3D = new Vector3(spawnPos2D.x, 0f, spawnPos2D.y);
-            
-            // Vector3 spawnPosRelative = transform.position + spawnPos3D;
-            Vector3 spawnPosRelative = new Vector3(10f, 10f, 10f);
-            
-            RaycastHit hit;
-
-            if (Physics.Raycast(spawnPosRelative, Vector3.down, out hit))
-            {
-                Vector3 spawnPosFinal = hit.point;
-                // Instantiate(spawnObject, spawnPosFinal, Quaternion.identity);
-            }
-            
-        }
+        // RaycastHit hit;
         
+        // Vector3 rayStartPos = spawnPlane.transform.position;
+
+        // if (Physics.Raycast(rayStartPos, spawnPlane.transform.up * -1.0f, out hit))
+        // {
+        //     Debug.Log("Hit");
+        //     Debug.DrawLine(rayStartPos, hit.point, Color.white, 100f);
+        //     Quaternion startRot = Quaternion.LookRotation(hit.normal);
+        //     startRot *= Quaternion.Euler(90, 0, 0);
+        //     GameObject newSpawnObj = Instantiate(spawnObject, hit.point, startRot);
+        //     newSpawnObj.transform.SetParent(spawnParent.transform);
+        // }
+        // else
+        // {
+        //     Debug.Log("Miss");
+        // }
     }
 
     // Update is called once per frame
@@ -37,10 +38,10 @@ public class MapController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            transform.Rotate(Vector3.up * speed * Time.deltaTime);
+            transform.Rotate(Vector3.left * speed * Time.deltaTime);
         } else if (Input.GetKey(KeyCode.S))
         {
-            transform.Rotate(Vector3.down * speed * Time.deltaTime);
+            transform.Rotate(Vector3.right * speed * Time.deltaTime);
         }
     }
 }
