@@ -1068,6 +1068,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2534964839176971238, guid: ba813fb42005f4c499877ec1b4a88e2a, type: 3}
+--- !u!1 &1199319917 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1341429208923559101, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
+  m_PrefabInstance: {fileID: 1813420237}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1235352481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2475,6 +2480,39 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 1356193784934308235, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
   m_PrefabInstance: {fileID: 1813420237}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1963317182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199319917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &2025616331 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 54fa0ae67c69f44289e04ff6c596979c, type: 3}
