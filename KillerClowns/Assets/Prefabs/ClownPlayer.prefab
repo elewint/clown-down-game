@@ -473,7 +473,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6629797300637803691, guid: 4091fd3cd71c6457fb833382bb7ee410, type: 3}
+  - {fileID: 2100000, guid: d51d33e7c09ac485eac26b03b6e8399e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -592,7 +592,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3846018093981099296, guid: 4091fd3cd71c6457fb833382bb7ee410, type: 3}
+  - {fileID: 2100000, guid: 50bd8ebf60e7a4ce19bb0e5bbd3d68c8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -774,7 +774,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 4091fd3cd71c6457fb833382bb7ee410, type: 3}
+  - {fileID: 2100000, guid: 7567e7fd4781b4507a30e171b8ec0b90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -857,7 +857,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4874126678125670354, guid: 4091fd3cd71c6457fb833382bb7ee410, type: 3}
+  - {fileID: 2100000, guid: 50bd8ebf60e7a4ce19bb0e5bbd3d68c8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -946,6 +946,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BalloonGun 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5030525987896763303, guid: a7a93187782a14a6f92c1611e53dabeb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4e352adb08ae449a9a787e07415a40a0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7a93187782a14a6f92c1611e53dabeb, type: 3}
 --- !u!4 &6699049407663852897 stripped
