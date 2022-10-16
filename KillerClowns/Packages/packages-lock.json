@@ -1,5 +1,13 @@
 {
   "dependencies": {
+    "com.deltation.toon-shader": {
+      "version": "file:../urp-toon-shader-master/urp-toon-shader-master/Packages/com.deltation.toon-shader",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.render-pipelines.universal": "12.1.6"
+      }
+    },
     "com.unity.burst": {
       "version": "1.6.5",
       "depth": 1,
