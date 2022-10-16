@@ -15,8 +15,8 @@ public class GameController : MonoBehaviour
     private Light sun;
     
     private float time = 0f;
-    private float dayLength = 5f;
-    private float nightLength = 5f;
+    private float dayLength = 45f;
+    private float nightLength = 45f;
     
     private void Start()
     {

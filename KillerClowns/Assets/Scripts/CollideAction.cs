@@ -15,14 +15,11 @@ public class CollideAction : MonoBehaviour {
     private void OnTriggerEnter(Collider other){
         // Debug.Log("COLLIDER ENTERED!");
         if (other.gameObject.tag == "Child") {
-            //other.gameObject.SetActive(false);
-            // Debug.Log("Player hit!");
-            gameController.incrementScore();
+            // gameController.incrementScore();
 
-
-            GameObject child = other.gameObject.transform.GetChild(0).gameObject;
-            Rigidbody balloon_Rigidbody = child.GetComponent<Rigidbody>();
-            balloon_Rigidbody.AddForce(transform.up * 300f);
+            // GameObject child = other.gameObject.transform.GetChild(0).gameObject;
+            // Rigidbody heart_Rigidbody = child.GetComponent<Rigidbody>();
+            // heart_Rigidbody.AddForce(transform.up * 300f);
         }
         else if (other.gameObject.tag == "Clown") {
             // YOU LOSE!
