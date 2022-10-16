@@ -38,19 +38,22 @@ public class MapController : MonoBehaviour
 
         if (Physics.Raycast(rayStartPos, spawnPlane.transform.up * -1.0f, out hit) && hit.transform.tag == "Map")
         {
+            // Raycast Debugging
             // Debug.Log("Spawned!");
             // Debug.DrawLine(rayStartPos, hit.point, Color.white, 100f);
 
             // Set rotation of child
             Quaternion startRot = Quaternion.LookRotation(hit.normal);
             startRot *= Quaternion.Euler(90, 0, 0);
+            startRot *= Quaternion.Euler(0, 90, 0);
 
+            // Make rotation face camera
             if (rayStartPos.x < -2f)
             {
-                startRot *= Quaternion.Euler(0, 45, 0);
+                startRot *= Quaternion.Euler(0, -45, 0);
             } else if (rayStartPos.x > 2f)
             {
-                startRot *= Quaternion.Euler(0, -45, 0);
+                startRot *= Quaternion.Euler(0, 45, 0);
             }
             
             // Spawn child
