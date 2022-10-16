@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class CollideAction : MonoBehaviour {
@@ -17,6 +18,10 @@ public class CollideAction : MonoBehaviour {
             other.gameObject.SetActive(false);
             // Debug.Log("Player hit!");
             gameController.incrementScore();
+        }
+        else if (other.gameObject.tag == "Clown") {
+            // YOU LOSE!
+            SceneManager.LoadScene("GameOver");
         }
     }
 }

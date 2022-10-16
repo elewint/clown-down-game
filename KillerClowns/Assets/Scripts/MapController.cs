@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class MapController : MonoBehaviour
 {
-    public GameObject spawnObject;
+    public GameObject childPrefab;
+    public GameObject clownPrefab;
     public GameObject spawnPlane;
     public GameObject spawnParent;
+    public GameController gc;
+
+    private GameObject spawnObject;
     private int speed = 20;
     // private float spawnRadius = 10f;
     // private int numOfObjects = 10;
@@ -15,6 +19,7 @@ public class MapController : MonoBehaviour
     void Start()
     {
         InvokeRepeating("SpawnChildren", 0f, 3f);
+        spawnObject = childPrefab;
     }
 
     // Update is called once per frame
@@ -31,6 +36,15 @@ public class MapController : MonoBehaviour
     
     private void SpawnChildren()
     {
+        if (gc.nightTime)
+        {
+            spawnObject = clownPrefab;
+        }
+        else
+        {
+            spawnObject = childPrefab;
+        }
+
         RaycastHit hit;
         
         Vector3 rayStartPos = spawnPlane.transform.position;

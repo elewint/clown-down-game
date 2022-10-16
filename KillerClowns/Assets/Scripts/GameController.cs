@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     public GameObject sunObject;
     public Camera mainCamera;
     public GameObject SpawnParent;
+    public bool nightTime = false;
 
     private int score = 0;
     private Light sun;
@@ -16,7 +17,6 @@ public class GameController : MonoBehaviour
     private float time = 0f;
     private float dayLength = 5f;
     private float nightLength = 5f;
-    private bool nightTime = false;
     
     private void Start()
     {
@@ -59,7 +59,10 @@ public class GameController : MonoBehaviour
     {
         Debug.Log("It's nighttime!");
         sun.color = Color.red;
-        
+
+        while (SpawnParent.transform.childCount > 0) {
+            DestroyImmediate(SpawnParent.transform.GetChild(0).gameObject);
+        }
     }
     
     private void dayTransition()
