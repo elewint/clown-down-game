@@ -36,7 +36,7 @@ public class MapController : MonoBehaviour
         Vector3 rayStartPos = spawnPlane.transform.position;
         rayStartPos.x = Random.Range(-10f, 10f);
 
-        if (Physics.Raycast(rayStartPos, spawnPlane.transform.up * -1.0f, out hit))
+        if (Physics.Raycast(rayStartPos, spawnPlane.transform.up * -1.0f, out hit) && hit.transform.tag == "Map")
         {
             // Debug.Log("Spawned!");
             // Debug.DrawLine(rayStartPos, hit.point, Color.white, 100f);
