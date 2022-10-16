@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement; 
 
-public class GameOverReturn : MonoBehaviour
+public class GameOver : MonoBehaviour
 {
     public void LoadGame() {
         
