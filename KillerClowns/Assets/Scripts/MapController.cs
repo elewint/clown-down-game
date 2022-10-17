@@ -11,7 +11,7 @@ public class MapController : MonoBehaviour
     public GameController gc;
 
     private GameObject spawnObject;
-    private int speed = 20;
+    private int speed = 25;
     // private float spawnRadius = 10f;
     // private int numOfObjects = 10;
 
@@ -36,7 +36,7 @@ public class MapController : MonoBehaviour
     
     private void SpawnChildren()
     {
-        if (gc.nightTime)
+        if (gc.isNightTime())
         {
             spawnObject = clownPrefab;
         }

@@ -4,11 +4,13 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement; 
 
-public class GameOver : MonoBehaviour
+public class GameOverFunctions : MonoBehaviour
 {
-    public void LoadGame() {
-        
+    public void Restart() {
+        SceneManager.LoadScene("Day"); 
+    }
+
+    public void ReturnToMenu() {
         SceneManager.LoadScene("MainMenu"); 
-        
     }
 }

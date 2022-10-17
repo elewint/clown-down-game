@@ -18,14 +18,19 @@ public class BalloonCollide : MonoBehaviour
             // Debug.Log("Child hit!");
             gameController.incrementScore();
 
-            GameObject child = other.gameObject.transform.GetChild(0).gameObject;
-            Rigidbody heart_Rigidbody = child.GetComponent<Rigidbody>();
-            heart_Rigidbody.AddForce(transform.up * 300f);
-            Destroy(other.gameObject);
+            GameObject heart = other.gameObject.transform.GetChild(0).gameObject;
+            Rigidbody heartRigidbody = heart.transform.GetChild(0).gameObject.GetComponent<Rigidbody>();
+            heartRigidbody.AddForce(heart.transform.up * 300f);
+            StartCoroutine(DestroyChild(other.gameObject));
         }
         else if (other.gameObject.tag == "Clown") {
             gameController.incrementScore();
             Destroy(other.gameObject);
         }
+    }
+    
+    IEnumerator DestroyChild(GameObject child) {
+        yield return new WaitForSeconds(1);
+        Destroy(child);
     }
 }

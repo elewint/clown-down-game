@@ -25,11 +25,7 @@ public class BalloonGun : MonoBehaviour
     {
         if (Input.GetKeyDown("e"))
         {
-            // print("space key was pressed");
-            // print(transform.position);
             Vector3 newPosition = transform.position + new Vector3(gunSize.x / 2, gunSize.y / 2, 0);
-            // print(transform.position);
-            // print(gunSize.x);
             GameObject newSpawnObj = Instantiate(spawnObject, newPosition, Random.rotation);
             newSpawnObj.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.color = balloonColor;
 
@@ -39,6 +35,8 @@ public class BalloonGun : MonoBehaviour
             //newSpawnObj.transform.localScale += new Vector3(10f, 10f, 10f);
             Rigidbody balloon_Rigidbody = newSpawnObj.GetComponent<Rigidbody>();
             balloon_Rigidbody.AddForce(transform.right * 600f);
+
+            Destroy(newSpawnObj, 10f);
         }
     }
 }
