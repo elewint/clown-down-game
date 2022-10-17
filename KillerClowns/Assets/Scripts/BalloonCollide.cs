@@ -15,16 +15,16 @@ public class BalloonCollide : MonoBehaviour
     private void OnTriggerEnter(Collider other){
         // Debug.Log("COLLIDER ENTERED!");
         if (other.gameObject.tag == "Child") {
-            //other.gameObject.SetActive(false);
-            // Debug.Log("Player hit!");
+            // Debug.Log("Child hit!");
             gameController.incrementScore();
 
             GameObject child = other.gameObject.transform.GetChild(0).gameObject;
             Rigidbody heart_Rigidbody = child.GetComponent<Rigidbody>();
             heart_Rigidbody.AddForce(transform.up * 300f);
-            Destroy(child);
+            Destroy(other.gameObject);
         }
         else if (other.gameObject.tag == "Clown") {
+            gameController.incrementScore();
             Destroy(other.gameObject);
         }
     }

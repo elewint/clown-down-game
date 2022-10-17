@@ -78,6 +78,10 @@ public class GameController : MonoBehaviour
         Debug.Log("It's daytime!");
         sun.color = new Color(1, 0.9568627f, 0.8392157f);
         mainCamera.backgroundColor = new Color(0.1058824f, 0.5832241f, 0.8980392f);
-        // ppVolume.GetComponent<Volume>().weight = 0f;
+        ppVolume.weight = 0f;
+
+        while (SpawnParent.transform.childCount > 0) {
+            DestroyImmediate(SpawnParent.transform.GetChild(0).gameObject);
+        }
     }
 }

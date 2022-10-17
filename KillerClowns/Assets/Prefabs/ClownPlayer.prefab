@@ -396,10 +396,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 8
-  m_Height: 1
+  m_Radius: 4.72
+  m_Height: 21.5
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: -1.9236212}
 --- !u!114 &1780054070081454249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -625,7 +625,6 @@ GameObject:
   - component: {fileID: 2864521679090697277}
   - component: {fileID: 2864521679090697276}
   - component: {fileID: 2864521679090697279}
-  - component: {fileID: 2864521679090697278}
   m_Layer: 0
   m_Name: thePlayer
   m_TagString: Player
@@ -664,7 +663,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2864521679090697265}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -699,20 +698,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &2864521679090697278
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2864521679090697265}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3053917815673272655
 GameObject:
   m_ObjectHideFlags: 0

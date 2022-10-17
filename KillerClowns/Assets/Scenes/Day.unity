@@ -2128,6 +2128,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClownPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 1341708183893035193, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1356193784934308235, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
       propertyPath: m_ClearFlags
       value: 2
