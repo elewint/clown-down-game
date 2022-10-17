@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 9164812623428970110}
   - component: {fileID: 4885881425217111961}
   - component: {fileID: 8316599950042822034}
+  - component: {fileID: 4595550583549811028}
   - component: {fileID: 991603958221813825}
   m_Layer: 0
   m_Name: BalloonAnimal
@@ -135,6 +136,20 @@ Rigidbody:
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!136 &8316599950042822034
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8386868171273911492}
+  m_Material: {fileID: 13400000, guid: 59a0a2669b8074420a113968356dbd88, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.65636635
+  m_Height: 1.3127327
+  m_Direction: 1
+  m_Center: {x: 0.16561949, y: -0.3629148, z: 0.32198572}
+--- !u!136 &4595550583549811028
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
