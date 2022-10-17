@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class GameController : MonoBehaviour
 {
@@ -9,18 +11,22 @@ public class GameController : MonoBehaviour
     public GameObject sunObject;
     public Camera mainCamera;
     public GameObject SpawnParent;
+    
+    public GameObject postProcessingObject;
     public bool nightTime = false;
 
     private int score = 0;
     private Light sun;
+    private Volume ppVolume;
     
     private float time = 0f;
-    private float dayLength = 45f;
-    private float nightLength = 45f;
+    private float dayLength = 5f;
+    private float nightLength = 5f;
     
     private void Start()
     {
         sun = sunObject.GetComponent<Light>();
+        ppVolume = postProcessingObject.GetComponent<Volume>();
     }
     
     private void Update()
@@ -60,6 +66,7 @@ public class GameController : MonoBehaviour
         Debug.Log("It's nighttime!");
         sun.color = Color.red;
         mainCamera.backgroundColor = new Color(0.007f, 0.1f, 0.16f);
+        ppVolume.weight = 1f;
 
         while (SpawnParent.transform.childCount > 0) {
             DestroyImmediate(SpawnParent.transform.GetChild(0).gameObject);
@@ -71,5 +78,6 @@ public class GameController : MonoBehaviour
         Debug.Log("It's daytime!");
         sun.color = new Color(1, 0.9568627f, 0.8392157f);
         mainCamera.backgroundColor = new Color(0.1058824f, 0.5832241f, 0.8980392f);
+        // ppVolume.GetComponent<Volume>().weight = 0f;
     }
 }

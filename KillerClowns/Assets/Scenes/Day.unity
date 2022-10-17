@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427182, b: 0.5645241, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366753, g: 0.48427093, b: 0.5645238, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 270578266}
   - component: {fileID: 270578265}
   m_Layer: 0
-  m_Name: Global Volume
+  m_Name: Post Processing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_IsGlobal: 1
   priority: 0
   blendDistance: 0
-  weight: 1
+  weight: 0
   sharedProfile: {fileID: 11400000, guid: b8d3f624f8426fb4899320b7dddda748, type: 2}
 --- !u!4 &270578266
 Transform:
@@ -1044,6 +1044,7 @@ MonoBehaviour:
   sunObject: {fileID: 675484991}
   mainCamera: {fileID: 1963317178}
   SpawnParent: {fileID: 1284343203}
+  postProcessingObject: {fileID: 270578264}
   nightTime: 0
 --- !u!1 &934948345
 GameObject:
