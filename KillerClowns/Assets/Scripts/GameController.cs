@@ -59,6 +59,11 @@ public class GameController : MonoBehaviour
             // sunObject.transform.(Vector3.left * (360f / dayLength + nightLength));
             sunObject.transform.rotation = sunRotation;
         }
+        
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
 
         // Move the sun
         // Check for nighttime
