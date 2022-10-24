@@ -24,5 +24,8 @@ public class PlayerCollide : MonoBehaviour {
             // YOU LOSE!
             gameController.GameOver();
         }
+        else if (other.gameObject.tag == "ClownSound"){
+            other.gameObject.GetComponent<AudioSource>().Play();
+        }
     }
 }

@@ -8,6 +8,7 @@ TagManager:
   - Map
   - Clown
   - Balloon
+  - ClownSound
   layers:
   - Default
   - TransparentFX
