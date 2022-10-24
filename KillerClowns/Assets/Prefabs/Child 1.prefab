@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2191193305653534058}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ChildMesh
   m_TagString: Child
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 6372577827231347631}
   - component: {fileID: 4849173445616693092}
   - component: {fileID: 4767557586182054193}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 3564170271474872228}
   - component: {fileID: 509642921502637972}
   - component: {fileID: -2940650305982660832}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Child 1
   m_TagString: Child
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 362503934569968833}
   - component: {fileID: 9005667604389691999}
   - component: {fileID: 719594158766448256}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 8658595029782300790}
   - component: {fileID: 2250261318698887071}
   - component: {fileID: 4641500214224220034}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -358,7 +358,7 @@ GameObject:
   - component: {fileID: 4699499270175628969}
   - component: {fileID: 6728547828360018218}
   - component: {fileID: 7012188218840231221}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 2663799971721359279}
   - component: {fileID: 82475277799696979}
   - component: {fileID: 2341805956890625886}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -524,7 +524,7 @@ GameObject:
   - component: {fileID: 1033367406625509858}
   - component: {fileID: 1998694321926484943}
   - component: {fileID: 6720679469267757662}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,7 +605,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4869196086642878759}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: heartParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -694,6 +694,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2a5ca060f5d2b42c987a70cd96565148, type: 3}
       propertyPath: m_Name
       value: heart
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2a5ca060f5d2b42c987a70cd96565148, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a5ca060f5d2b42c987a70cd96565148, type: 3}

@@ -1393,7 +1393,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1008395230}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BalloonGunParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2430,9 +2430,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1341429208923559101, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1341708183893035193, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
       propertyPath: m_Name
       value: ClownPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341708183893035193, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1341708183893035193, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
       propertyPath: m_IsActive
@@ -2506,6 +2514,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1718808397439455890, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1780054070081454249, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
       propertyPath: SpawnParent
       value: 
@@ -2517,6 +2529,10 @@ PrefabInstance:
     - target: {fileID: 2658132970574259072, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864521679090697265, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2864521679090697277, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
       propertyPath: m_LocalScale.x
@@ -2666,9 +2682,21 @@ PrefabInstance:
       propertyPath: parent
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4741687971136910749, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5330826167379687715, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
       propertyPath: m_Name
       value: Right Arm
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330826167379687715, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5444484062622416639, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6083651570587364263, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
       propertyPath: m_IsTrigger
@@ -2678,6 +2706,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Left Arm
       objectReference: {fileID: 0}
+    - target: {fileID: 6768197613261513207, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943793294217751116, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6997724242631615013, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
       propertyPath: m_LocalPosition.z
       value: -10.15
@@ -2685,6 +2721,10 @@ PrefabInstance:
     - target: {fileID: 8500248666544819630, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
       propertyPath: m_Name
       value: arms
+      objectReference: {fileID: 0}
+    - target: {fileID: 8500248666544819630, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9132494706353379092, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
       propertyPath: m_LocalScale.x
