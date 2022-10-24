@@ -103,6 +103,14 @@ public class GameController : MonoBehaviour
     {
         mouseLook.SetCursorLock(false);
         PlayerPrefs.SetInt("Score", score);
+
+        int highscore = PlayerPrefs.GetInt("Highscore", 0);
+
+        if (score > highscore)
+        {
+            PlayerPrefs.SetInt("Highscore", score);
+        }
+
         SceneManager.LoadScene("GameOver");
     }
     
