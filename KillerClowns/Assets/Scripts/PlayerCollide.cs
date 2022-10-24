@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 
 public class PlayerCollide : MonoBehaviour {
+    public AudioClip[] clownSounds;
     private GameController gameController;
 
     void Start()
@@ -25,7 +26,14 @@ public class PlayerCollide : MonoBehaviour {
             gameController.GameOver();
         }
         else if (other.gameObject.tag == "ClownSound"){
-            other.gameObject.GetComponent<AudioSource>().Play();
+            AudioSource audioSource = other.gameObject.GetComponent<AudioSource>();
+
+            int soundChoice = Random.Range(0, clownSounds.Length + 2);
+
+            if (soundChoice >= 0 && soundChoice < clownSounds.Length) {
+                audioSource.clip = clownSounds[soundChoice];
+                audioSource.Play();
+            }
         }
     }
 }

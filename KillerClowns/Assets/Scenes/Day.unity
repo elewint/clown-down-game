@@ -3089,6 +3089,22 @@ PrefabInstance:
       propertyPath: SpawnParent
       value: 
       objectReference: {fileID: 1284343203}
+    - target: {fileID: 1780054070081454249, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
+      propertyPath: clownSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1780054070081454249, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
+      propertyPath: clownSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2ded82ef7e4284d6b9db6f6334594c46, type: 3}
+    - target: {fileID: 1780054070081454249, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
+      propertyPath: clownSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: be5aa4ca8e5fd442d81e4b7833326ce0, type: 3}
+    - target: {fileID: 1780054070081454249, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
+      propertyPath: clownSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6796e1ef3f5ac416a921bf749cf414db, type: 3}
     - target: {fileID: 2658132970574259072, guid: 164af276b54ff49c4b8fd55571d1ea84, type: 3}
       propertyPath: m_LocalPosition.z
       value: 9.66

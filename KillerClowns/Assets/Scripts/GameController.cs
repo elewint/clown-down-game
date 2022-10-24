@@ -26,7 +26,7 @@ public class GameController : MonoBehaviour
     private Volume ppVolume;
     
     private float time = 0f;
-    private float dayLength = 45f;
+    private float dayLength = 5f;
     private float nightLength = 45f;
     private bool firstNight = true;
     
