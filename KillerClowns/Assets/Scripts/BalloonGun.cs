@@ -7,7 +7,8 @@ public class BalloonGun : MonoBehaviour
 {
     public GameObject spawnObject; 
     public GameObject handBalloonAnimal; 
-    public Vector3 gunSize;
+    public GameObject parent;
+    private Vector3 gunSize;
     private MeshCollider gunRenderer;
     private Color balloonColor;
 
@@ -18,19 +19,24 @@ public class BalloonGun : MonoBehaviour
         handBalloonAnimal = handBalloonAnimal.transform.GetChild(0).gameObject;
 
         balloonColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.75f, 1f);
+        balloonColor.a = 0.8f;
         handBalloonAnimal.GetComponent<Renderer>().material.color = balloonColor;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (CrossPlatformInputManager.GetButtonDown("Fire1"))
+        transform.position = parent.transform.position;
+        transform.rotation = parent.transform.rotation;
+
+        if (CrossPlatformInputManager.GetButtonDown("Fire1") && Time.timeScale == 1f)
         {
             Vector3 newPosition = transform.position + new Vector3(gunSize.x / 2, gunSize.y / 2, 0);
             GameObject newSpawnObj = Instantiate(spawnObject, newPosition, Random.rotation);
             newSpawnObj.transform.GetChild(0).gameObject.GetComponent<Renderer>().material.color = balloonColor;
 
             balloonColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+            balloonColor.a = 0.8f;
             handBalloonAnimal.GetComponent<Renderer>().material.color = balloonColor;
 
             //newSpawnObj.transform.localScale += new Vector3(10f, 10f, 10f);

@@ -16,12 +16,19 @@ public class BalloonCollide : MonoBehaviour
         // Debug.Log("COLLIDER ENTERED!");
         if (other.gameObject.tag == "Child") {
             // Debug.Log("Child hit!");
+            other.gameObject.GetComponent<Collider>().enabled = false;
             gameController.incrementScore();
 
             GameObject heart = other.gameObject.transform.GetChild(0).gameObject;
             Rigidbody heartRigidbody = heart.transform.GetChild(0).gameObject.GetComponent<Rigidbody>();
+            
+            if (other.gameObject.transform.childCount > 1) {
+                GameObject child = other.gameObject.transform.GetChild(1).gameObject;
+                Destroy(child);
+            }
+            
             heartRigidbody.AddForce(heart.transform.up * 300f);
-            StartCoroutine(DestroyChild(other.gameObject));
+            StartCoroutine(DestroyHeart(heart));
         }
         else if (other.gameObject.tag == "Clown") {
             gameController.incrementScore();
@@ -29,8 +36,8 @@ public class BalloonCollide : MonoBehaviour
         }
     }
     
-    IEnumerator DestroyChild(GameObject child) {
+    IEnumerator DestroyHeart(GameObject heart) {
         yield return new WaitForSeconds(1);
-        Destroy(child);
+        Destroy(heart);
     }
 }

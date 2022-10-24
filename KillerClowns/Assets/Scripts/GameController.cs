@@ -18,6 +18,8 @@ public class GameController : MonoBehaviour
     public GameObject postProcessingObject;
     private MouseLook mouseLook;
 
+    public GameObject PauseMenu;
+
     private bool nightTime = false;
     private int score = 0;
     private Light sun;
@@ -27,6 +29,8 @@ public class GameController : MonoBehaviour
     private float dayLength = 45f;
     private float nightLength = 45f;
     private bool firstNight = true;
+    
+    private bool paused = false;
     
     private void Start()
     {
@@ -60,14 +64,33 @@ public class GameController : MonoBehaviour
             sunObject.transform.rotation = sunRotation;
         }
         
-        if (Input.GetKey("escape"))
+        if (Input.GetKeyDown("escape"))
         {
-            Application.Quit();
+            if (!paused)
+            {
+                Pause();
+            }
+            else
+            {
+                Resume();
+            }
         }
+    }
+    
+    public void Pause()
+    {
+        PauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+        mouseLook.SetCursorLock(false);
+        paused = !paused;
+    }
 
-        // Move the sun
-        // Check for nighttime
-        // If nighttime, don't move sun
+    public void Resume()
+    {
+        PauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+        mouseLook.SetCursorLock(true);
+        paused = !paused;
     }
     
     public void incrementScore()
