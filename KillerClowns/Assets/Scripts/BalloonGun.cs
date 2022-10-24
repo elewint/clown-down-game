@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class BalloonGun : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class BalloonGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("e"))
+        if (CrossPlatformInputManager.GetButtonDown("Fire1"))
         {
             Vector3 newPosition = transform.position + new Vector3(gunSize.x / 2, gunSize.y / 2, 0);
             GameObject newSpawnObj = Instantiate(spawnObject, newPosition, Random.rotation);

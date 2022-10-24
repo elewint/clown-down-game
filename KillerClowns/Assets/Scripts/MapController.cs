@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class MapController : MonoBehaviour
 {
@@ -25,7 +26,7 @@ public class MapController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+         if (CrossPlatformInputManager.GetButton("Vertical"))
         {
             transform.Rotate(Vector3.left * speed * Time.deltaTime);
         } else if (Input.GetKey(KeyCode.S))
