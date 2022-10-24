@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.SceneManagement; 
 
 public class BalloonGun : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class BalloonGun : MonoBehaviour
     private Vector3 gunSize;
     private MeshCollider gunRenderer;
     private Color balloonColor;
+    private GameController gameController;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,7 @@ public class BalloonGun : MonoBehaviour
         balloonColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.75f, 1f);
         balloonColor.a = 0.8f;
         handBalloonAnimal.GetComponent<Renderer>().material.color = balloonColor;
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
     }
 
     // Update is called once per frame
@@ -45,5 +48,9 @@ public class BalloonGun : MonoBehaviour
 
             Destroy(newSpawnObj, 10f);
         }
+
+         if (transform.position.y < -80) {
+             gameController.GameOver();
+            }
     }
 }
