@@ -6,6 +6,7 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class GameController : MonoBehaviour
 {
@@ -64,7 +65,7 @@ public class GameController : MonoBehaviour
             sunObject.transform.rotation = sunRotation;
         }
         
-        if (Input.GetKeyDown("escape"))
+        if (CrossPlatformInputManager.GetButtonDown("Pause"))
         {
             if (!paused)
             {
